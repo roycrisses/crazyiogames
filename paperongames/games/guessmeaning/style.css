@@ -1,0 +1,119 @@
+.gm-game {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gm-info {
+  margin-bottom: 2rem;
+}
+
+.gm-stats {
+  display: flex;
+  justify-content: space-around;
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.gm-word-card {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a1c2e 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.gm-word-card h3 {
+  color: var(--background);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.gm-word {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent);
+  letter-spacing: 0.1rem;
+}
+
+.gm-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gm-option {
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 3px solid var(--primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.gm-option:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-5px);
+}
+
+.gm-option.correct {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+  animation: pulse 0.5s ease;
+}
+
+.gm-option.wrong {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  animation: shake 0.5s ease;
+}
+
+.gm-option.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.gm-controls {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gm-message {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-height: 40px;
+  color: var(--primary);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+@media (max-width: 768px) {
+  .gm-word {
+    font-size: 2.5rem;
+  }
+
+  .gm-options {
+    grid-template-columns: 1fr;
+  }
+}

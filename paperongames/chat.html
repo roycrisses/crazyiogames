@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Community Chat – SimplePlay">
+  <meta name="description" content="Chat with other players and share your gaming experiences!">
+  <title>Community Chat – SimplePlay</title>
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    .chat-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px var(--shadow);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .chat-header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .nickname-section {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .nickname-section span {
+      color: var(--background);
+      font-weight: 500;
+    }
+
+    .nickname-section button {
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .nickname-section button:hover {
+      background: #d11f36;
+    }
+
+    .chat-messages {
+      height: 500px;
+      overflow-y: auto;
+      padding: 1.5rem;
+      background: var(--background);
+    }
+
+    .chat-message {
+      margin-bottom: 1rem;
+      animation: messageSlide 0.3s ease;
+    }
+
+    @keyframes messageSlide {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.3rem;
+      font-size: 0.85rem;
+    }
+
+    .message-user {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .message-time {
+      color: var(--gray);
+    }
+
+    .message-text {
+      background: white;
+      padding: 0.8rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      word-wrap: break-word;
+    }
+
+    .own-message .message-user {
+      color: var(--accent);
+    }
+
+    .own-message .message-text {
+      background: #ffebee;
+      border-left: 3px solid var(--accent);
+    }
+
+    .chat-input-section {
+      padding: 1.5rem;
+      background: white;
+      border-top: 1px solid var(--background);
+    }
+
+    .chat-form {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .chat-form input {
+      flex: 1;
+      padding: 0.8rem 1.2rem;
+      border: 2px solid var(--background);
+      border-radius: 50px;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .chat-form input:focus {
+      border-color: var(--accent);
+    }
+
+    .chat-form button {
+      padding: 0.8rem 2rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .chat-form button:hover {
+      background: #d11f36;
+      transform: scale(1.05);
+    }
+
+    .chat-controls {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    .chat-controls button {
+      padding: 0.6rem 1.2rem;
+      background: var(--gray);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .chat-controls button:hover {
+      background: #6b7280;
+    }
+
+    @media (max-width: 768px) {
+      .chat-messages {
+        height: 400px;
+      }
+
+      .chat-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .chat-form {
+        flex-direction: column;
+      }
+
+      .chat-form button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        🎮 Simple<span>Play</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Chat Section -->
+  <div class="container">
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>💬 Community Chat</h2>
+        <div class="nickname-section">
+          <span>Playing as: <strong id="currentNickname">Player</strong></span>
+          <button id="changeNickname">Change</button>
+        </div>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages will be loaded here -->
+      </div>
+
+      <div class="chat-input-section">
+        <form class="chat-form" id="chatForm">
+          <input 
+            type="text" 
+            id="chatInput" 
+            placeholder="Say hi 👋 or share your score!" 
+            maxlength="200"
+            required
+          >
+          <button type="submit">Send</button>
+        </form>
+        <div class="chat-controls">
+          <button id="clearChat">Clear Chat History</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat Info -->
+    <div style="max-width: 900px; margin: 2rem auto; text-align: center; color: var(--gray);">
+      <p>💡 <strong>Note:</strong> This is a local chat that stores messages in your browser. Messages are visible only on your device.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>SimplePlay</h4>
+        <p>Free browser games for everyone. Play instantly without downloads or sign-ups!</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="chat.html">Community Chat</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Popular Games</h4>
+        <ul>
+          <li><a href="game.html?id=tictactoe">Tic Tac Toe</a></li>
+          <li><a href="game.html?id=trivia">Trivia Quiz</a></li>
+          <li><a href="game.html?id=memory">Memory Match</a></li>
+          <li><a href="game.html?id=wordpuzzle">Word Puzzle</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:contact@simpleplay.com">✉️ Contact</a></li>
+          <li><a href="#">🐦 Twitter</a></li>
+          <li><a href="#">📘 Facebook</a></li>
+          <li><a href="#">📷 Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimplePlay. All rights reserved. Made with ❤️ for gamers.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

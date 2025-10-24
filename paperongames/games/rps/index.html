@@ -1,0 +1,42 @@
+<div class="rps-game">
+  <div class="rps-info">
+    <div class="rps-stats">
+      <div><strong>Wins:</strong> <span id="rpsWins">0</span></div>
+      <div><strong>Losses:</strong> <span id="rpsLosses">0</span></div>
+      <div><strong>Ties:</strong> <span id="rpsTies">0</span></div>
+    </div>
+  </div>
+
+  <div class="rps-display">
+    <div class="rps-player">
+      <h3>You</h3>
+      <div class="rps-choice" id="playerChoice">?</div>
+    </div>
+    <div class="rps-vs">VS</div>
+    <div class="rps-player">
+      <h3>Computer</h3>
+      <div class="rps-choice" id="computerChoice">?</div>
+    </div>
+  </div>
+
+  <div class="rps-result" id="rpsResult">Make your choice!</div>
+
+  <div class="rps-options">
+    <button class="rps-btn" onclick="playRPS('rock')">
+      <span class="rps-icon">✊</span>
+      <span>Rock</span>
+    </button>
+    <button class="rps-btn" onclick="playRPS('paper')">
+      <span class="rps-icon">✋</span>
+      <span>Paper</span>
+    </button>
+    <button class="rps-btn" onclick="playRPS('scissors')">
+      <span class="rps-icon">✌️</span>
+      <span>Scissors</span>
+    </button>
+  </div>
+
+  <div class="rps-controls">
+    <button class="btn btn-secondary" onclick="resetRPSScores()">Reset Scores</button>
+  </div>
+</div>

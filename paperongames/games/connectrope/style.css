@@ -1,0 +1,78 @@
+.cr-game {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cr-info {
+  margin-bottom: 1.5rem;
+}
+
+.cr-stats {
+  display: flex;
+  justify-content: space-around;
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.cr-instructions {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.cr-instructions p {
+  margin: 0;
+  color: var(--background);
+}
+
+#connectCanvas {
+  background: var(--background);
+  border: 3px solid var(--primary);
+  border-radius: 15px;
+  cursor: crosshair;
+  display: block;
+  margin: 0 auto 1.5rem;
+  max-width: 100%;
+  touch-action: none;
+}
+
+.cr-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.cr-message {
+  font-size: 1.3rem;
+  font-weight: 600;
+  min-height: 40px;
+  color: var(--primary);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  #connectCanvas {
+    width: 100%;
+    height: auto;
+  }
+}

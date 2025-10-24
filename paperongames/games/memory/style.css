@@ -1,0 +1,137 @@
+.memory-game {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.memory-info {
+  margin-bottom: 2rem;
+}
+
+.memory-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+
+.memory-card {
+  aspect-ratio: 1;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.memory-card:hover {
+  transform: scale(1.05);
+}
+
+.memory-card.flipped {
+  background: var(--background);
+  transform: rotateY(180deg);
+}
+
+.memory-card.matched {
+  background: var(--accent);
+  color: white;
+  transform: scale(0.95);
+  cursor: default;
+  animation: matchPulse 0.5s ease;
+}
+
+.memory-card .card-front,
+.memory-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.memory-card .card-front {
+  transform: rotateY(180deg);
+}
+
+.memory-card .card-back::before {
+  content: '?';
+  color: var(--background);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.memory-controls {
+  margin-bottom: 1rem;
+}
+
+.memory-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-height: 40px;
+  color: var(--primary);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes matchPulse {
+  0%, 100% { transform: scale(0.95); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .memory-board {
+    max-width: 400px;
+    gap: 10px;
+  }
+
+  .memory-card {
+    font-size: 2rem;
+  }
+
+  .memory-card .card-back::before {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .memory-board {
+    max-width: 320px;
+  }
+
+  .memory-card {
+    font-size: 1.5rem;
+  }
+
+  .memory-card .card-back::before {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,35 @@
+<div class="wp-game">
+  <div class="wp-info">
+    <div class="wp-stats">
+      <div><strong>Score:</strong> <span id="wpScore">0</span></div>
+      <div><strong>Time:</strong> <span id="wpTimer">0:00</span></div>
+      <div><strong>High Score:</strong> <span id="wpHighScore">0</span></div>
+    </div>
+  </div>
+
+  <div class="wp-word-container">
+    <h3>Unscramble the word:</h3>
+    <div class="wp-scrambled" id="scrambledWord">-----</div>
+    <div class="wp-hint" id="hint">Hint will appear here</div>
+  </div>
+
+  <div class="wp-input-section">
+    <input 
+      type="text" 
+      id="wordInput" 
+      class="wp-input" 
+      placeholder="Type your answer..." 
+      maxlength="20"
+      autocomplete="off"
+    >
+    <button class="btn btn-primary" onclick="checkWordPuzzle()">Submit</button>
+  </div>
+
+  <div class="wp-controls">
+    <button class="btn btn-secondary" onclick="showWordHint()">💡 Hint</button>
+    <button class="btn btn-secondary" onclick="skipWord()">⏭️ Skip</button>
+    <button class="btn btn-secondary" onclick="resetWordPuzzle()">🔄 New Game</button>
+  </div>
+
+  <div class="wp-message" id="wpMessage"></div>
+</div>

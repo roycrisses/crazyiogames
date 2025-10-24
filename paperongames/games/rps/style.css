@@ -1,0 +1,135 @@
+.rps-game {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rps-info {
+  margin-bottom: 2rem;
+}
+
+.rps-stats {
+  display: flex;
+  justify-content: space-around;
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.rps-display {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.rps-player {
+  flex: 1;
+  min-width: 150px;
+}
+
+.rps-player h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.rps-choice {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background: var(--background);
+  border: 5px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.rps-vs {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.rps-result {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  min-height: 50px;
+  color: var(--primary);
+}
+
+.rps-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.rps-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.rps-btn:hover {
+  background: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.rps-btn .rps-icon {
+  font-size: 3rem;
+}
+
+.rps-controls {
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .rps-choice {
+    width: 120px;
+    height: 120px;
+    font-size: 4rem;
+  }
+
+  .rps-btn {
+    min-width: 100px;
+    padding: 1rem 1.5rem;
+  }
+
+  .rps-btn .rps-icon {
+    font-size: 2.5rem;
+  }
+}

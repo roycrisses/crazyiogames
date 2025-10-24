@@ -1,0 +1,33 @@
+<div class="ttt-game">
+  <div class="ttt-info">
+    <div class="ttt-score">
+      <div>
+        <strong>You:</strong> <span id="playerScore">0</span>
+      </div>
+      <div>
+        <strong>AI:</strong> <span id="aiScore">0</span>
+      </div>
+      <div>
+        <strong>High Score:</strong> <span id="highScore">0</span>
+      </div>
+    </div>
+    <div class="ttt-status" id="gameStatus">Your turn! (X)</div>
+  </div>
+
+  <div class="ttt-board" id="board">
+    <div class="ttt-cell" data-index="0"></div>
+    <div class="ttt-cell" data-index="1"></div>
+    <div class="ttt-cell" data-index="2"></div>
+    <div class="ttt-cell" data-index="3"></div>
+    <div class="ttt-cell" data-index="4"></div>
+    <div class="ttt-cell" data-index="5"></div>
+    <div class="ttt-cell" data-index="6"></div>
+    <div class="ttt-cell" data-index="7"></div>
+    <div class="ttt-cell" data-index="8"></div>
+  </div>
+
+  <div class="ttt-controls">
+    <button class="btn btn-primary" onclick="resetTicTacToe()">New Game</button>
+    <button class="btn btn-secondary" onclick="resetScores()">Reset Scores</button>
+  </div>
+</div>

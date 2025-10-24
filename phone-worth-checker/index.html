@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check your used phone's resale value. Find out what your iPhone, Samsung, or Google phone is worth on the resale market.">
+    <meta name="keywords" content="iPhone 12 resale value, phone value checker, used phone worth, phone resale price, used iPhone value, Samsung resale value">
+    <title>What's My Phone Worth? - Used Phone Value Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>What's My Phone Worth?</h1>
+            <p class="subtitle">Check the current resale value of your used phone</p>
+        </header>
+
+        <main>
+            <div class="selector-section">
+                <h2 class="section-title">Step 1: Find Your Phone</h2>
+                <label for="phone-search">Search Phone Model:</label>
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="phone-search" 
+                        placeholder="Type to search (e.g., iPhone 12, Samsung S23, Pixel 7)"
+                        autocomplete="off"
+                    />
+                    <div id="search-results" class="search-results hidden"></div>
+                </div>
+                <div id="selected-phone-display" class="selected-phone hidden">
+                    <span class="selected-label">Selected:</span>
+                    <span id="selected-phone-name"></span>
+                </div>
+            </div>
+
+            <div id="specifications-section" class="specifications-section hidden">
+                <h2 class="section-title">Step 2: Phone Specifications</h2>
+                
+                <div class="spec-group">
+                    <label for="storage-select">Storage Capacity:</label>
+                    <select id="storage-select">
+                        <option value="">-- Select Storage --</option>
+                        <option value="64">64 GB</option>
+                        <option value="128">128 GB</option>
+                        <option value="256">256 GB</option>
+                        <option value="512">512 GB</option>
+                        <option value="1024">1 TB</option>
+                    </select>
+                </div>
+
+                <div class="spec-group">
+                    <label for="ram-select">RAM (Memory):</label>
+                    <select id="ram-select">
+                        <option value="">-- Select RAM --</option>
+                        <option value="4">4 GB</option>
+                        <option value="6">6 GB</option>
+                        <option value="8">8 GB</option>
+                        <option value="12">12 GB</option>
+                        <option value="16">16 GB</option>
+                    </select>
+                </div>
+
+                <div class="spec-group">
+                    <label for="condition-select">Overall Condition:</label>
+                    <select id="condition-select">
+                        <option value="">-- Select Condition --</option>
+                        <option value="mint">Mint - Like New, No Scratches</option>
+                        <option value="excellent">Excellent - Minor Wear, Fully Functional</option>
+                        <option value="good">Good - Visible Wear, Works Well</option>
+                        <option value="fair">Fair - Heavy Wear, Some Issues</option>
+                        <option value="poor">Poor - Major Damage, Functional</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="image-upload-section" class="image-upload-section hidden">
+                <h2 class="section-title">Step 3: Upload Phone Photos (Optional)</h2>
+                <p class="section-description">Upload clear photos from all angles - AI will analyze condition automatically</p>
+                
+                <div id="ai-analysis-result" class="ai-analysis-result hidden">
+                    <div class="ai-badge">AI Analysis</div>
+                    <p id="ai-analysis-text"></p>
+                </div>
+                
+                <div class="upload-grid">
+                    <div class="upload-item">
+                        <label for="img-front" class="upload-label">Front View</label>
+                        <input type="file" id="img-front" accept="image/*" class="file-input">
+                        <div class="image-preview" id="preview-front">
+                            <span class="upload-placeholder">+</span>
+                        </div>
+                    </div>
+
+                    <div class="upload-item">
+                        <label for="img-back" class="upload-label">Back View</label>
+                        <input type="file" id="img-back" accept="image/*" class="file-input">
+                        <div class="image-preview" id="preview-back">
+                            <span class="upload-placeholder">+</span>
+                        </div>
+                    </div>
+
+                    <div class="upload-item">
+                        <label for="img-top" class="upload-label">Top View</label>
+                        <input type="file" id="img-top" accept="image/*" class="file-input">
+                        <div class="image-preview" id="preview-top">
+                            <span class="upload-placeholder">+</span>
+                        </div>
+                    </div>
+
+                    <div class="upload-item">
+                        <label for="img-bottom" class="upload-label">Bottom View</label>
+                        <input type="file" id="img-bottom" accept="image/*" class="file-input">
+                        <div class="image-preview" id="preview-bottom">
+                            <span class="upload-placeholder">+</span>
+                        </div>
+                    </div>
+
+                    <div class="upload-item">
+                        <label for="img-left" class="upload-label">Left Side</label>
+                        <input type="file" id="img-left" accept="image/*" class="file-input">
+                        <div class="image-preview" id="preview-left">
+                            <span class="upload-placeholder">+</span>
+                        </div>
+                    </div>
+
+                    <div class="upload-item">
+                        <label for="img-right" class="upload-label">Right Side</label>
+                        <input type="file" id="img-right" accept="image/*" class="file-input">
+                        <div class="image-preview" id="preview-right">
+                            <span class="upload-placeholder">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="calculate-btn" class="calculate-button">Calculate My Phone's Worth</button>
+            </div>
+
+            <div id="result-section" class="result-section hidden">
+                <div class="price-box">
+                    <div class="current-price">
+                        <span class="label">Estimated Resale Value:</span>
+                        <span id="price-value" class="price">$0</span>
+                    </div>
+                    <div class="price-breakdown">
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Base Price:</span>
+                            <span id="base-price" class="breakdown-value">$0</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Storage Adjustment:</span>
+                            <span id="storage-adjustment" class="breakdown-value">$0</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-label">Condition Adjustment:</span>
+                            <span id="condition-adjustment" class="breakdown-value">$0</span>
+                        </div>
+                    </div>
+                    <div class="price-trend">
+                        <span id="trend-indicator" class="trend"></span>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p class="info-text">Price based on average eBay listings with your specifications</p>
+                    <p class="spec-summary" id="spec-summary"></p>
+                    <p class="update-date">Last updated: <span id="last-updated"></span></p>
+                </div>
+
+                <div class="affiliate-section">
+                    <h2>Sell Your Phone</h2>
+                    <div class="button-group">
+                        <a href="#" id="ebay-link" class="affiliate-button" target="_blank" rel="noopener">
+                            Check eBay Listings
+                        </a>
+                        <a href="#" id="swappa-link" class="affiliate-button" target="_blank" rel="noopener">
+                            View on Swappa
+                        </a>
+                        <a href="#" id="amazon-link" class="affiliate-button" target="_blank" rel="noopener">
+                            Amazon Renewed
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-space">
+                <div class="ad-placeholder">
+                    Advertisement
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Prices are estimates based on recent market data and may vary by condition and location.</p>
+            <p class="copyright">&copy; 2025 What's My Phone Worth</p>
+        </footer>
+    </div>
+
+    <!-- Hugging Face Inference Library -->
+    <script type="module">
+        import { HfInference } from 'https://cdn.jsdelivr.net/npm/@huggingface/inference@2.6.4/+esm';
+        window.HfInference = HfInference;
+    </script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

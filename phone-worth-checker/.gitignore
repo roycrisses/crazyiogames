@@ -1,0 +1,10 @@
+# API Keys and Sensitive Data
+config.js
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

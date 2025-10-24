@@ -1,0 +1,92 @@
+.ttt-game {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ttt-info {
+  margin-bottom: 2rem;
+}
+
+.ttt-score {
+  display: flex;
+  justify-content: space-around;
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ttt-score div {
+  font-size: 1.1rem;
+}
+
+.ttt-status {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 10px;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.ttt-cell {
+  aspect-ratio: 1;
+  background: var(--background);
+  border: 3px solid var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ttt-cell:hover:not(.taken) {
+  background: rgba(239, 35, 60, 0.1);
+  transform: scale(1.05);
+}
+
+.ttt-cell.taken {
+  cursor: not-allowed;
+}
+
+.ttt-cell.winner {
+  background: var(--accent);
+  color: white;
+  animation: pulse 0.5s ease;
+}
+
+.ttt-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@media (max-width: 480px) {
+  .ttt-cell {
+    font-size: 2rem;
+  }
+
+  .ttt-board {
+    max-width: 300px;
+  }
+}

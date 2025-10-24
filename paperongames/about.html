@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="About Us – SimplePlay">
+  <meta name="description" content="Learn more about SimplePlay and our mission to provide free, accessible browser games for everyone.">
+  <title>About Us – SimplePlay</title>
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #1a1c2e 100%);
+      color: white;
+      padding: 5rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px var(--shadow);
+      margin-bottom: 2rem;
+    }
+
+    .about-section h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .about-section p {
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .feature-box {
+      background: var(--background);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-box .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-box h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info {
+      background: var(--background);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        🎮 Simple<span>Play</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Hero -->
+  <div class="about-hero">
+    <h1>About SimplePlay 🎮</h1>
+    <p>Making gaming accessible, fun, and free for everyone</p>
+  </div>
+
+  <!-- About Content -->
+  <div class="container">
+    <!-- Mission Section -->
+    <div class="about-section">
+      <h2>🎯 Our Mission</h2>
+      <p>
+        I built SimplePlay to share simple joy. Gaming shouldn't require accounts, subscriptions, or downloading gigabytes of data. 
+        It should just... work. Click and play. That's it.
+      </p>
+      <p>
+        These games are made for quick breaks, lazy afternoons, or when you just want something fun without the fuss. 
+        No microtransactions, no ads screaming at you, no tracking your every move. Just games that respect your time and privacy.
+      </p>
+      <p>
+        This site runs on your browser, saves your scores locally, and doesn't send anything to any server. Your data stays yours. Always.
+      </p>
+    </div>
+
+    <!-- How It Works -->
+    <div class="about-section">
+      <h2>⚙️ How It Works</h2>
+      <p>
+        SimplePlay is built using modern web technologies including HTML5, CSS3, and vanilla JavaScript. 
+        All games run entirely in your browser with no server-side processing required.
+      </p>
+      <p>
+        Your game progress, high scores, and chat messages are stored locally on your device using your browser's 
+        localStorage. This means your data stays private and secure—we never collect or store any personal information.
+      </p>
+      
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="icon">🚀</div>
+          <h3>Fast & Lightweight</h3>
+          <p>No heavy downloads. Games load instantly.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="icon">🔒</div>
+          <h3>Privacy First</h3>
+          <p>All data stored locally. No tracking.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="icon">📱</div>
+          <h3>Cross-Platform</h3>
+          <p>Works on any device with a browser.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="icon">🎨</div>
+          <h3>Clean Design</h3>
+          <p>Simple, intuitive interface for all ages.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What We Offer -->
+    <div class="about-section">
+      <h2>🎮 What We Offer</h2>
+      <p>
+        Our growing collection includes a variety of game genres to suit different tastes:
+      </p>
+      <ul style="list-style-position: inside; color: var(--text); line-height: 2;">
+        <li><strong>Logic Games:</strong> Tic Tac Toe, Trivia Quiz</li>
+        <li><strong>Word Games:</strong> Word Puzzle, Guess the Meaning</li>
+        <li><strong>Puzzle Games:</strong> Memory Match, Connect Rope</li>
+        <li><strong>Fun & Casual:</strong> Coin Flip, Rock Paper Scissors</li>
+      </ul>
+      <p>
+        We're constantly working on adding new games and improving existing ones based on player feedback.
+      </p>
+    </div>
+
+    <!-- Technology Stack -->
+    <div class="about-section">
+      <h2>💻 Technology Stack</h2>
+      <p>
+        SimplePlay is built with simplicity and performance in mind:
+      </p>
+      <ul style="list-style-position: inside; color: var(--text); line-height: 2;">
+        <li><strong>Frontend:</strong> HTML5, CSS3, Vanilla JavaScript (no frameworks)</li>
+        <li><strong>Storage:</strong> Browser localStorage for data persistence</li>
+        <li><strong>Hosting:</strong> Static hosting (GitHub Pages / Netlify compatible)</li>
+        <li><strong>Design:</strong> Responsive design with mobile-first approach</li>
+      </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="about-section">
+      <h2>📧 Get In Touch</h2>
+      <div class="contact-info">
+        <p>Have questions, suggestions, or feedback? We'd love to hear from you!</p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:contact@simpleplay.com">contact@simpleplay.com</a>
+        </p>
+        <p style="margin-top: 1rem;">
+          Follow us on social media for updates and new game releases!
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div style="text-align: center; margin: 3rem 0;">
+      <h2 style="color: var(--primary); margin-bottom: 1rem;">Ready to Play?</h2>
+      <p style="color: var(--gray); margin-bottom: 2rem;">
+        Join thousands of players and start playing free games today!
+      </p>
+      <a href="games.html" class="btn btn-primary" style="margin-right: 1rem;">Browse Games</a>
+      <a href="chat.html" class="btn btn-secondary">Join Chat</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>SimplePlay</h4>
+        <p>Free browser games for everyone. Play instantly without downloads or sign-ups!</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="chat.html">Community Chat</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Popular Games</h4>
+        <ul>
+          <li><a href="game.html?id=tictactoe">Tic Tac Toe</a></li>
+          <li><a href="game.html?id=trivia">Trivia Quiz</a></li>
+          <li><a href="game.html?id=memory">Memory Match</a></li>
+          <li><a href="game.html?id=wordpuzzle">Word Puzzle</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:contact@simpleplay.com">✉️ Contact</a></li>
+          <li><a href="#">🐦 Twitter</a></li>
+          <li><a href="#">📘 Facebook</a></li>
+          <li><a href="#">📷 Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimplePlay. All rights reserved. Made with ❤️ for gamers.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

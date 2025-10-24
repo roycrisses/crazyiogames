@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="All Games – SimplePlay">
+  <meta name="description" content="Browse and play all our free browser games. Puzzles, quizzes, strategy games and more!">
+  <title>All Games – SimplePlay</title>
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        🎮 Simple<span>Play</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Games Section -->
+  <div class="container">
+    <h1 class="section-title">🎮 All Games</h1>
+    
+    <!-- Search & Filter -->
+    <div class="search-filter">
+      <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search games...">
+      <div class="filter-tags">
+        <button class="filter-tag active" data-category="all">All</button>
+        <button class="filter-tag" data-category="logic">Logic</button>
+        <button class="filter-tag" data-category="word">Word</button>
+        <button class="filter-tag" data-category="puzzle">Puzzle</button>
+        <button class="filter-tag" data-category="fun">Fun</button>
+      </div>
+    </div>
+
+    <!-- Games Grid -->
+    <div class="game-grid" id="gamesGrid">
+      <div class="game-card" data-category="logic" data-name="tic tac toe">
+        <div class="game-icon">⭕</div>
+        <h3>Tic Tac Toe</h3>
+        <p>Classic 3x3 strategy game. Beat the AI or challenge a friend!</p>
+        <button class="btn btn-primary" onclick="loadGame('tictactoe')">Play Now</button>
+      </div>
+
+      <div class="game-card" data-category="puzzle" data-name="connect rope">
+        <div class="game-icon">🔗</div>
+        <h3>Connect Rope</h3>
+        <p>Connect all dots without crossing paths. Challenging puzzle!</p>
+        <button class="btn btn-primary" onclick="loadGame('connectrope')">Play Now</button>
+      </div>
+
+      <div class="game-card" data-category="word" data-name="word puzzle">
+        <div class="game-icon">📝</div>
+        <h3>Word Puzzle</h3>
+        <p>Unscramble letters to find the hidden word. Test your vocabulary!</p>
+        <button class="btn btn-primary" onclick="loadGame('wordpuzzle')">Play Now</button>
+      </div>
+
+      <div class="game-card" data-category="word" data-name="guess the meaning">
+        <div class="game-icon">📚</div>
+        <h3>Guess the Meaning</h3>
+        <p>Choose the correct definition for the given word. Learn new words!</p>
+        <button class="btn btn-primary" onclick="loadGame('guessmeaning')">Play Now</button>
+      </div>
+
+      <div class="game-card" data-category="logic" data-name="trivia quiz">
+        <div class="game-icon">❓</div>
+        <h3>Trivia Quiz</h3>
+        <p>Test your knowledge with fun multiple-choice questions!</p>
+        <button class="btn btn-primary" onclick="loadGame('trivia')">Play Now</button>
+      </div>
+
+      <div class="game-card" data-category="puzzle" data-name="memory match">
+        <div class="game-icon">🧠</div>
+        <h3>Memory Match</h3>
+        <p>Flip cards and find matching pairs. Train your memory!</p>
+        <button class="btn btn-primary" onclick="loadGame('memory')">Play Now</button>
+      </div>
+
+      <div class="game-card" data-category="fun" data-name="coin flip">
+        <div class="game-icon">🪙</div>
+        <h3>Coin Flip</h3>
+        <p>Heads or tails? Test your luck with this simple game!</p>
+        <button class="btn btn-primary" onclick="loadGame('coinflip')">Play Now</button>
+      </div>
+
+      <div class="game-card" data-category="fun" data-name="rock paper scissors">
+        <div class="game-icon">✊</div>
+        <h3>Rock Paper Scissors</h3>
+        <p>The timeless classic. Can you beat the computer?</p>
+        <button class="btn btn-primary" onclick="loadGame('rps')">Play Now</button>
+      </div>
+    </div>
+
+    <div id="noResults" style="display: none; text-align: center; padding: 3rem;">
+      <h3>No games found 😔</h3>
+      <p>Try adjusting your search or filter.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>SimplePlay</h4>
+        <p>Free browser games for everyone. Play instantly without downloads or sign-ups!</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="chat.html">Community Chat</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Popular Games</h4>
+        <ul>
+          <li><a href="game.html?id=tictactoe">Tic Tac Toe</a></li>
+          <li><a href="game.html?id=trivia">Trivia Quiz</a></li>
+          <li><a href="game.html?id=memory">Memory Match</a></li>
+          <li><a href="game.html?id=wordpuzzle">Word Puzzle</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:contact@simpleplay.com">✉️ Contact</a></li>
+          <li><a href="#">🐦 Twitter</a></li>
+          <li><a href="#">📘 Facebook</a></li>
+          <li><a href="#">📷 Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimplePlay. All rights reserved. Made with ❤️ for gamers.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Search and Filter Functionality
+    const searchBox = document.getElementById('searchBox');
+    const filterTags = document.querySelectorAll('.filter-tag');
+    const gameCards = document.querySelectorAll('.game-card');
+    const noResults = document.getElementById('noResults');
+    const gamesGrid = document.getElementById('gamesGrid');
+
+    let currentCategory = 'all';
+
+    // Search functionality
+    searchBox.addEventListener('input', filterGames);
+
+    // Filter tags
+    filterTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        filterTags.forEach(t => t.classList.remove('active'));
+        tag.classList.add('active');
+        currentCategory = tag.dataset.category;
+        filterGames();
+      });
+    });
+
+    function filterGames() {
+      const searchTerm = searchBox.value.toLowerCase();
+      let visibleCount = 0;
+
+      gameCards.forEach(card => {
+        const gameName = card.dataset.name;
+        const gameCategory = card.dataset.category;
+        
+        const matchesSearch = gameName.includes(searchTerm);
+        const matchesCategory = currentCategory === 'all' || gameCategory === currentCategory;
+
+        if (matchesSearch && matchesCategory) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Show/hide no results message
+      if (visibleCount === 0) {
+        gamesGrid.style.display = 'none';
+        noResults.style.display = 'block';
+      } else {
+        gamesGrid.style.display = 'grid';
+        noResults.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

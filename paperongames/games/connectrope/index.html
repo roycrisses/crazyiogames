@@ -1,0 +1,23 @@
+<div class="cr-game">
+  <div class="cr-info">
+    <div class="cr-stats">
+      <div><strong>Level:</strong> <span id="crLevel">1</span></div>
+      <div><strong>Moves:</strong> <span id="crMoves">0</span></div>
+      <div><strong>Best:</strong> <span id="crBest">Level 1</span></div>
+    </div>
+  </div>
+
+  <div class="cr-instructions">
+    <p>🎯 Connect all dots without crossing paths!</p>
+  </div>
+
+  <canvas id="connectCanvas" width="400" height="400"></canvas>
+
+  <div class="cr-controls">
+    <button class="btn btn-secondary" onclick="resetLevel()">🔄 Reset</button>
+    <button class="btn btn-primary" onclick="checkSolution()">✓ Check</button>
+    <button class="btn btn-secondary" onclick="clearPaths()">Clear All</button>
+  </div>
+
+  <div class="cr-message" id="crMessage"></div>
+</div>

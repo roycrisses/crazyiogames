@@ -1,0 +1,655 @@
+{
+  "lastUpdated": "2025-01-15",
+  "phones": [
+    {
+      "id": "iphone-15-pro-max",
+      "name": "iPhone 15 Pro Max",
+      "brand": "Apple",
+      "price": 1050,
+      "trend": "Stable — holding value well",
+      "ebayQuery": "iPhone+15+Pro+Max+used",
+      "swappaQuery": "iphone-15-pro-max",
+      "amazonQuery": "iPhone+15+Pro+Max+Renewed"
+    },
+    {
+      "id": "iphone-15-pro",
+      "name": "iPhone 15 Pro",
+      "brand": "Apple",
+      "price": 890,
+      "trend": "Stable — strong demand",
+      "ebayQuery": "iPhone+15+Pro+used",
+      "swappaQuery": "iphone-15-pro",
+      "amazonQuery": "iPhone+15+Pro+Renewed"
+    },
+    {
+      "id": "iphone-15",
+      "name": "iPhone 15",
+      "brand": "Apple",
+      "price": 720,
+      "trend": "Stable — good resale value",
+      "ebayQuery": "iPhone+15+used",
+      "swappaQuery": "iphone-15",
+      "amazonQuery": "iPhone+15+Renewed"
+    },
+    {
+      "id": "iphone-14-pro-max",
+      "name": "iPhone 14 Pro Max",
+      "brand": "Apple",
+      "price": 750,
+      "trend": "Down 8% — newer models available",
+      "ebayQuery": "iPhone+14+Pro+Max+used",
+      "swappaQuery": "iphone-14-pro-max",
+      "amazonQuery": "iPhone+14+Pro+Max+Renewed"
+    },
+    {
+      "id": "iphone-14-pro",
+      "name": "iPhone 14 Pro",
+      "brand": "Apple",
+      "price": 650,
+      "trend": "Down 10% — newer models available",
+      "ebayQuery": "iPhone+14+Pro+used",
+      "swappaQuery": "iphone-14-pro",
+      "amazonQuery": "iPhone+14+Pro+Renewed"
+    },
+    {
+      "id": "iphone-14",
+      "name": "iPhone 14",
+      "brand": "Apple",
+      "price": 485,
+      "trend": "Down 7% — steady depreciation",
+      "ebayQuery": "iPhone+14+used",
+      "swappaQuery": "iphone-14",
+      "amazonQuery": "iPhone+14+Renewed"
+    },
+    {
+      "id": "iphone-13-pro-max",
+      "name": "iPhone 13 Pro Max",
+      "brand": "Apple",
+      "price": 520,
+      "trend": "Down 12% — still popular",
+      "ebayQuery": "iPhone+13+Pro+Max+used",
+      "swappaQuery": "iphone-13-pro-max",
+      "amazonQuery": "iPhone+13+Pro+Max+Renewed"
+    },
+    {
+      "id": "iphone-13-pro",
+      "name": "iPhone 13 Pro",
+      "brand": "Apple",
+      "price": 450,
+      "trend": "Down 11% — good mid-range option",
+      "ebayQuery": "iPhone+13+Pro+used",
+      "swappaQuery": "iphone-13-pro",
+      "amazonQuery": "iPhone+13+Pro+Renewed"
+    },
+    {
+      "id": "iphone-13",
+      "name": "iPhone 13",
+      "brand": "Apple",
+      "price": 380,
+      "trend": "Down 9% — popular budget option",
+      "ebayQuery": "iPhone+13+used",
+      "swappaQuery": "iphone-13",
+      "amazonQuery": "iPhone+13+Renewed"
+    },
+    {
+      "id": "iphone-12-pro-max",
+      "name": "iPhone 12 Pro Max",
+      "brand": "Apple",
+      "price": 410,
+      "trend": "Down 15% — aging but capable",
+      "ebayQuery": "iPhone+12+Pro+Max+used",
+      "swappaQuery": "iphone-12-pro-max",
+      "amazonQuery": "iPhone+12+Pro+Max+Renewed"
+    },
+    {
+      "id": "iphone-12",
+      "name": "iPhone 12",
+      "brand": "Apple",
+      "price": 320,
+      "trend": "Down 13% — affordable option",
+      "ebayQuery": "iPhone+12+used",
+      "swappaQuery": "iphone-12",
+      "amazonQuery": "iPhone+12+Renewed"
+    },
+    {
+      "id": "iphone-11",
+      "name": "iPhone 11",
+      "brand": "Apple",
+      "price": 240,
+      "trend": "Down 10% — budget friendly",
+      "ebayQuery": "iPhone+11+used",
+      "swappaQuery": "iphone-11",
+      "amazonQuery": "iPhone+11+Renewed"
+    },
+    {
+      "id": "samsung-s24-ultra",
+      "name": "Samsung Galaxy S24 Ultra",
+      "brand": "Samsung",
+      "price": 980,
+      "trend": "Stable — flagship device",
+      "ebayQuery": "Samsung+Galaxy+S24+Ultra+used",
+      "swappaQuery": "samsung-galaxy-s24-ultra",
+      "amazonQuery": "Samsung+Galaxy+S24+Ultra+Renewed"
+    },
+    {
+      "id": "samsung-s24-plus",
+      "name": "Samsung Galaxy S24+",
+      "brand": "Samsung",
+      "price": 750,
+      "trend": "Stable — strong performance",
+      "ebayQuery": "Samsung+Galaxy+S24+Plus+used",
+      "swappaQuery": "samsung-galaxy-s24-plus",
+      "amazonQuery": "Samsung+Galaxy+S24+Plus+Renewed"
+    },
+    {
+      "id": "samsung-s24",
+      "name": "Samsung Galaxy S24",
+      "brand": "Samsung",
+      "price": 630,
+      "trend": "Stable — good value",
+      "ebayQuery": "Samsung+Galaxy+S24+used",
+      "swappaQuery": "samsung-galaxy-s24",
+      "amazonQuery": "Samsung+Galaxy+S24+Renewed"
+    },
+    {
+      "id": "samsung-s23-ultra",
+      "name": "Samsung Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "price": 650,
+      "trend": "Down 14% — newer model released",
+      "ebayQuery": "Samsung+Galaxy+S23+Ultra+used",
+      "swappaQuery": "samsung-galaxy-s23-ultra",
+      "amazonQuery": "Samsung+Galaxy+S23+Ultra+Renewed"
+    },
+    {
+      "id": "samsung-s23",
+      "name": "Samsung Galaxy S23",
+      "brand": "Samsung",
+      "price": 450,
+      "trend": "Down 12% — good mid-range",
+      "ebayQuery": "Samsung+Galaxy+S23+used",
+      "swappaQuery": "samsung-galaxy-s23",
+      "amazonQuery": "Samsung+Galaxy+S23+Renewed"
+    },
+    {
+      "id": "samsung-s22-ultra",
+      "name": "Samsung Galaxy S22 Ultra",
+      "brand": "Samsung",
+      "price": 480,
+      "trend": "Down 18% — still capable",
+      "ebayQuery": "Samsung+Galaxy+S22+Ultra+used",
+      "swappaQuery": "samsung-galaxy-s22-ultra",
+      "amazonQuery": "Samsung+Galaxy+S22+Ultra+Renewed"
+    },
+    {
+      "id": "samsung-s22",
+      "name": "Samsung Galaxy S22",
+      "brand": "Samsung",
+      "price": 340,
+      "trend": "Down 16% — affordable option",
+      "ebayQuery": "Samsung+Galaxy+S22+used",
+      "swappaQuery": "samsung-galaxy-s22",
+      "amazonQuery": "Samsung+Galaxy+S22+Renewed"
+    },
+    {
+      "id": "samsung-s21",
+      "name": "Samsung Galaxy S21",
+      "brand": "Samsung",
+      "price": 280,
+      "trend": "Down 15% — budget choice",
+      "ebayQuery": "Samsung+Galaxy+S21+used",
+      "swappaQuery": "samsung-galaxy-s21",
+      "amazonQuery": "Samsung+Galaxy+S21+Renewed"
+    },
+    {
+      "id": "pixel-8-pro",
+      "name": "Google Pixel 8 Pro",
+      "brand": "Google",
+      "price": 580,
+      "trend": "Stable — excellent camera",
+      "ebayQuery": "Google+Pixel+8+Pro+used",
+      "swappaQuery": "google-pixel-8-pro",
+      "amazonQuery": "Google+Pixel+8+Pro+Renewed"
+    },
+    {
+      "id": "pixel-8",
+      "name": "Google Pixel 8",
+      "brand": "Google",
+      "price": 440,
+      "trend": "Stable — pure Android experience",
+      "ebayQuery": "Google+Pixel+8+used",
+      "swappaQuery": "google-pixel-8",
+      "amazonQuery": "Google+Pixel+8+Renewed"
+    },
+    {
+      "id": "pixel-7-pro",
+      "name": "Google Pixel 7 Pro",
+      "brand": "Google",
+      "price": 380,
+      "trend": "Down 11% — great value",
+      "ebayQuery": "Google+Pixel+7+Pro+used",
+      "swappaQuery": "google-pixel-7-pro",
+      "amazonQuery": "Google+Pixel+7+Pro+Renewed"
+    },
+    {
+      "id": "pixel-7",
+      "name": "Google Pixel 7",
+      "brand": "Google",
+      "price": 290,
+      "trend": "Down 10% — budget friendly",
+      "ebayQuery": "Google+Pixel+7+used",
+      "swappaQuery": "google-pixel-7",
+      "amazonQuery": "Google+Pixel+7+Renewed"
+    },
+    {
+      "id": "iphone-15-plus",
+      "name": "iPhone 15 Plus",
+      "brand": "Apple",
+      "price": 820,
+      "trend": "Stable — large screen option",
+      "ebayQuery": "iPhone+15+Plus+used",
+      "swappaQuery": "iphone-15-plus",
+      "amazonQuery": "iPhone+15+Plus+Renewed"
+    },
+    {
+      "id": "iphone-14-plus",
+      "name": "iPhone 14 Plus",
+      "brand": "Apple",
+      "price": 580,
+      "trend": "Down 9% — good value large screen",
+      "ebayQuery": "iPhone+14+Plus+used",
+      "swappaQuery": "iphone-14-plus",
+      "amazonQuery": "iPhone+14+Plus+Renewed"
+    },
+    {
+      "id": "iphone-13-mini",
+      "name": "iPhone 13 Mini",
+      "brand": "Apple",
+      "price": 340,
+      "trend": "Down 12% — compact option",
+      "ebayQuery": "iPhone+13+Mini+used",
+      "swappaQuery": "iphone-13-mini",
+      "amazonQuery": "iPhone+13+Mini+Renewed"
+    },
+    {
+      "id": "iphone-12-mini",
+      "name": "iPhone 12 Mini",
+      "brand": "Apple",
+      "price": 280,
+      "trend": "Down 14% — affordable compact",
+      "ebayQuery": "iPhone+12+Mini+used",
+      "swappaQuery": "iphone-12-mini",
+      "amazonQuery": "iPhone+12+Mini+Renewed"
+    },
+    {
+      "id": "iphone-se-2022",
+      "name": "iPhone SE (2022)",
+      "brand": "Apple",
+      "price": 260,
+      "trend": "Stable — budget iPhone",
+      "ebayQuery": "iPhone+SE+2022+used",
+      "swappaQuery": "iphone-se-2022",
+      "amazonQuery": "iPhone+SE+2022+Renewed"
+    },
+    {
+      "id": "iphone-xr",
+      "name": "iPhone XR",
+      "brand": "Apple",
+      "price": 180,
+      "trend": "Down 8% — older but usable",
+      "ebayQuery": "iPhone+XR+used",
+      "swappaQuery": "iphone-xr",
+      "amazonQuery": "iPhone+XR+Renewed"
+    },
+    {
+      "id": "iphone-x",
+      "name": "iPhone X",
+      "brand": "Apple",
+      "price": 150,
+      "trend": "Down 10% — legacy model",
+      "ebayQuery": "iPhone+X+used",
+      "swappaQuery": "iphone-x",
+      "amazonQuery": "iPhone+X+Renewed"
+    },
+    {
+      "id": "samsung-z-fold-5",
+      "name": "Samsung Galaxy Z Fold 5",
+      "brand": "Samsung",
+      "price": 1200,
+      "trend": "Stable — premium foldable",
+      "ebayQuery": "Samsung+Galaxy+Z+Fold+5+used",
+      "swappaQuery": "samsung-galaxy-z-fold-5",
+      "amazonQuery": "Samsung+Galaxy+Z+Fold+5+Renewed"
+    },
+    {
+      "id": "samsung-z-flip-5",
+      "name": "Samsung Galaxy Z Flip 5",
+      "brand": "Samsung",
+      "price": 680,
+      "trend": "Stable — compact foldable",
+      "ebayQuery": "Samsung+Galaxy+Z+Flip+5+used",
+      "swappaQuery": "samsung-galaxy-z-flip-5",
+      "amazonQuery": "Samsung+Galaxy+Z+Flip+5+Renewed"
+    },
+    {
+      "id": "samsung-s23-fe",
+      "name": "Samsung Galaxy S23 FE",
+      "brand": "Samsung",
+      "price": 420,
+      "trend": "Stable — value flagship",
+      "ebayQuery": "Samsung+Galaxy+S23+FE+used",
+      "swappaQuery": "samsung-galaxy-s23-fe",
+      "amazonQuery": "Samsung+Galaxy+S23+FE+Renewed"
+    },
+    {
+      "id": "samsung-s21-fe",
+      "name": "Samsung Galaxy S21 FE",
+      "brand": "Samsung",
+      "price": 290,
+      "trend": "Down 13% — affordable option",
+      "ebayQuery": "Samsung+Galaxy+S21+FE+used",
+      "swappaQuery": "samsung-galaxy-s21-fe",
+      "amazonQuery": "Samsung+Galaxy+S21+FE+Renewed"
+    },
+    {
+      "id": "samsung-a54",
+      "name": "Samsung Galaxy A54",
+      "brand": "Samsung",
+      "price": 320,
+      "trend": "Stable — mid-range",
+      "ebayQuery": "Samsung+Galaxy+A54+used",
+      "swappaQuery": "samsung-galaxy-a54",
+      "amazonQuery": "Samsung+Galaxy+A54+Renewed"
+    },
+    {
+      "id": "samsung-a34",
+      "name": "Samsung Galaxy A34",
+      "brand": "Samsung",
+      "price": 240,
+      "trend": "Stable — budget friendly",
+      "ebayQuery": "Samsung+Galaxy+A34+used",
+      "swappaQuery": "samsung-galaxy-a34",
+      "amazonQuery": "Samsung+Galaxy+A34+Renewed"
+    },
+    {
+      "id": "samsung-a14",
+      "name": "Samsung Galaxy A14",
+      "brand": "Samsung",
+      "price": 120,
+      "trend": "Stable — entry level",
+      "ebayQuery": "Samsung+Galaxy+A14+used",
+      "swappaQuery": "samsung-galaxy-a14",
+      "amazonQuery": "Samsung+Galaxy+A14+Renewed"
+    },
+    {
+      "id": "pixel-7a",
+      "name": "Google Pixel 7a",
+      "brand": "Google",
+      "price": 320,
+      "trend": "Stable — budget Pixel",
+      "ebayQuery": "Google+Pixel+7a+used",
+      "swappaQuery": "google-pixel-7a",
+      "amazonQuery": "Google+Pixel+7a+Renewed"
+    },
+    {
+      "id": "pixel-6-pro",
+      "name": "Google Pixel 6 Pro",
+      "brand": "Google",
+      "price": 280,
+      "trend": "Down 14% — older flagship",
+      "ebayQuery": "Google+Pixel+6+Pro+used",
+      "swappaQuery": "google-pixel-6-pro",
+      "amazonQuery": "Google+Pixel+6+Pro+Renewed"
+    },
+    {
+      "id": "pixel-6",
+      "name": "Google Pixel 6",
+      "brand": "Google",
+      "price": 210,
+      "trend": "Down 12% — affordable Pixel",
+      "ebayQuery": "Google+Pixel+6+used",
+      "swappaQuery": "google-pixel-6",
+      "amazonQuery": "Google+Pixel+6+Renewed"
+    },
+    {
+      "id": "pixel-6a",
+      "name": "Google Pixel 6a",
+      "brand": "Google",
+      "price": 180,
+      "trend": "Down 10% — budget option",
+      "ebayQuery": "Google+Pixel+6a+used",
+      "swappaQuery": "google-pixel-6a",
+      "amazonQuery": "Google+Pixel+6a+Renewed"
+    },
+    {
+      "id": "oneplus-12",
+      "name": "OnePlus 12",
+      "brand": "OnePlus",
+      "price": 680,
+      "trend": "Stable — flagship performance",
+      "ebayQuery": "OnePlus+12+used",
+      "swappaQuery": "oneplus-12",
+      "amazonQuery": "OnePlus+12+Renewed"
+    },
+    {
+      "id": "oneplus-11",
+      "name": "OnePlus 11",
+      "brand": "OnePlus",
+      "price": 480,
+      "trend": "Down 12% — great value",
+      "ebayQuery": "OnePlus+11+used",
+      "swappaQuery": "oneplus-11",
+      "amazonQuery": "OnePlus+11+Renewed"
+    },
+    {
+      "id": "oneplus-10-pro",
+      "name": "OnePlus 10 Pro",
+      "brand": "OnePlus",
+      "price": 360,
+      "trend": "Down 16% — aging flagship",
+      "ebayQuery": "OnePlus+10+Pro+used",
+      "swappaQuery": "oneplus-10-pro",
+      "amazonQuery": "OnePlus+10+Pro+Renewed"
+    },
+    {
+      "id": "oneplus-nord-3",
+      "name": "OnePlus Nord 3",
+      "brand": "OnePlus",
+      "price": 280,
+      "trend": "Stable — mid-range value",
+      "ebayQuery": "OnePlus+Nord+3+used",
+      "swappaQuery": "oneplus-nord-3",
+      "amazonQuery": "OnePlus+Nord+3+Renewed"
+    },
+    {
+      "id": "xiaomi-13-ultra",
+      "name": "Xiaomi 13 Ultra",
+      "brand": "Xiaomi",
+      "price": 720,
+      "trend": "Stable — camera flagship",
+      "ebayQuery": "Xiaomi+13+Ultra+used",
+      "swappaQuery": "xiaomi-13-ultra",
+      "amazonQuery": "Xiaomi+13+Ultra+Renewed"
+    },
+    {
+      "id": "xiaomi-13-pro",
+      "name": "Xiaomi 13 Pro",
+      "brand": "Xiaomi",
+      "price": 540,
+      "trend": "Down 10% — premium option",
+      "ebayQuery": "Xiaomi+13+Pro+used",
+      "swappaQuery": "xiaomi-13-pro",
+      "amazonQuery": "Xiaomi+13+Pro+Renewed"
+    },
+    {
+      "id": "xiaomi-13",
+      "name": "Xiaomi 13",
+      "brand": "Xiaomi",
+      "price": 420,
+      "trend": "Down 11% — good value",
+      "ebayQuery": "Xiaomi+13+used",
+      "swappaQuery": "xiaomi-13",
+      "amazonQuery": "Xiaomi+13+Renewed"
+    },
+    {
+      "id": "xiaomi-12-pro",
+      "name": "Xiaomi 12 Pro",
+      "brand": "Xiaomi",
+      "price": 380,
+      "trend": "Down 15% — older flagship",
+      "ebayQuery": "Xiaomi+12+Pro+used",
+      "swappaQuery": "xiaomi-12-pro",
+      "amazonQuery": "Xiaomi+12+Pro+Renewed"
+    },
+    {
+      "id": "xiaomi-redmi-note-13-pro",
+      "name": "Xiaomi Redmi Note 13 Pro",
+      "brand": "Xiaomi",
+      "price": 260,
+      "trend": "Stable — budget value",
+      "ebayQuery": "Xiaomi+Redmi+Note+13+Pro+used",
+      "swappaQuery": "xiaomi-redmi-note-13-pro",
+      "amazonQuery": "Xiaomi+Redmi+Note+13+Pro+Renewed"
+    },
+    {
+      "id": "motorola-edge-40-pro",
+      "name": "Motorola Edge 40 Pro",
+      "brand": "Motorola",
+      "price": 420,
+      "trend": "Stable — flagship option",
+      "ebayQuery": "Motorola+Edge+40+Pro+used",
+      "swappaQuery": "motorola-edge-40-pro",
+      "amazonQuery": "Motorola+Edge+40+Pro+Renewed"
+    },
+    {
+      "id": "motorola-razr-40-ultra",
+      "name": "Motorola Razr 40 Ultra",
+      "brand": "Motorola",
+      "price": 580,
+      "trend": "Stable — foldable option",
+      "ebayQuery": "Motorola+Razr+40+Ultra+used",
+      "swappaQuery": "motorola-razr-40-ultra",
+      "amazonQuery": "Motorola+Razr+40+Ultra+Renewed"
+    },
+    {
+      "id": "motorola-moto-g-power",
+      "name": "Motorola Moto G Power",
+      "brand": "Motorola",
+      "price": 140,
+      "trend": "Stable — budget friendly",
+      "ebayQuery": "Motorola+Moto+G+Power+used",
+      "swappaQuery": "motorola-moto-g-power",
+      "amazonQuery": "Motorola+Moto+G+Power+Renewed"
+    },
+    {
+      "id": "sony-xperia-1-v",
+      "name": "Sony Xperia 1 V",
+      "brand": "Sony",
+      "price": 820,
+      "trend": "Stable — multimedia flagship",
+      "ebayQuery": "Sony+Xperia+1+V+used",
+      "swappaQuery": "sony-xperia-1-v",
+      "amazonQuery": "Sony+Xperia+1+V+Renewed"
+    },
+    {
+      "id": "sony-xperia-5-v",
+      "name": "Sony Xperia 5 V",
+      "brand": "Sony",
+      "price": 620,
+      "trend": "Stable — compact flagship",
+      "ebayQuery": "Sony+Xperia+5+V+used",
+      "swappaQuery": "sony-xperia-5-v",
+      "amazonQuery": "Sony+Xperia+5+V+Renewed"
+    },
+    {
+      "id": "nothing-phone-2",
+      "name": "Nothing Phone 2",
+      "brand": "Nothing",
+      "price": 380,
+      "trend": "Stable — unique design",
+      "ebayQuery": "Nothing+Phone+2+used",
+      "swappaQuery": "nothing-phone-2",
+      "amazonQuery": "Nothing+Phone+2+Renewed"
+    },
+    {
+      "id": "asus-rog-phone-7",
+      "name": "ASUS ROG Phone 7",
+      "brand": "ASUS",
+      "price": 680,
+      "trend": "Stable — gaming phone",
+      "ebayQuery": "ASUS+ROG+Phone+7+used",
+      "swappaQuery": "asus-rog-phone-7",
+      "amazonQuery": "ASUS+ROG+Phone+7+Renewed"
+    },
+    {
+      "id": "oppo-find-x6-pro",
+      "name": "OPPO Find X6 Pro",
+      "brand": "OPPO",
+      "price": 620,
+      "trend": "Stable — camera flagship",
+      "ebayQuery": "OPPO+Find+X6+Pro+used",
+      "swappaQuery": "oppo-find-x6-pro",
+      "amazonQuery": "OPPO+Find+X6+Pro+Renewed"
+    },
+    {
+      "id": "vivo-x90-pro",
+      "name": "Vivo X90 Pro",
+      "brand": "Vivo",
+      "price": 580,
+      "trend": "Stable — photography phone",
+      "ebayQuery": "Vivo+X90+Pro+used",
+      "swappaQuery": "vivo-x90-pro",
+      "amazonQuery": "Vivo+X90+Pro+Renewed"
+    },
+    {
+      "id": "realme-gt-3",
+      "name": "Realme GT 3",
+      "brand": "Realme",
+      "price": 340,
+      "trend": "Stable — fast charging",
+      "ebayQuery": "Realme+GT+3+used",
+      "swappaQuery": "realme-gt-3",
+      "amazonQuery": "Realme+GT+3+Renewed"
+    },
+    {
+      "id": "honor-magic-5-pro",
+      "name": "Honor Magic 5 Pro",
+      "brand": "Honor",
+      "price": 520,
+      "trend": "Stable — flagship option",
+      "ebayQuery": "Honor+Magic+5+Pro+used",
+      "swappaQuery": "honor-magic-5-pro",
+      "amazonQuery": "Honor+Magic+5+Pro+Renewed"
+    },
+    {
+      "id": "huawei-p60-pro",
+      "name": "Huawei P60 Pro",
+      "brand": "Huawei",
+      "price": 480,
+      "trend": "Stable — camera flagship",
+      "ebayQuery": "Huawei+P60+Pro+used",
+      "swappaQuery": "huawei-p60-pro",
+      "amazonQuery": "Huawei+P60+Pro+Renewed"
+    },
+    {
+      "id": "nokia-xr21",
+      "name": "Nokia XR21",
+      "brand": "Nokia",
+      "price": 280,
+      "trend": "Stable — rugged phone",
+      "ebayQuery": "Nokia+XR21+used",
+      "swappaQuery": "nokia-xr21",
+      "amazonQuery": "Nokia+XR21+Renewed"
+    },
+    {
+      "id": "lg-v60-thinq",
+      "name": "LG V60 ThinQ",
+      "brand": "LG",
+      "price": 220,
+      "trend": "Down 12% — discontinued brand",
+      "ebayQuery": "LG+V60+ThinQ+used",
+      "swappaQuery": "lg-v60-thinq",
+      "amazonQuery": "LG+V60+ThinQ+Renewed"
+    }
+  ]
+}

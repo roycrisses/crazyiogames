@@ -1,0 +1,26 @@
+{
+  "name": "SimplePlay - Free Browser Games",
+  "short_name": "SimplePlay",
+  "description": "Play free fun browser games like Tic Tac Toe, Trivia, Word Puzzle, and more. No login, no ads, just pure fun!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EDF2F4",
+  "theme_color": "#2B2D42",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "lang": "en-US"
+}

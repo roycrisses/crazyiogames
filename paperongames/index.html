@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="SimplePlay – Free Browser Games">
+  <meta name="description" content="Play free fun browser games like Tic Tac Toe, Trivia, Word Puzzle, and more. No login, no ads, just pure fun!">
+  <meta name="keywords" content="free browser games, tic tac toe, puzzle, trivia, word game, no login, fun games">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SimplePlay">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="SimplePlay – Free Browser Games">
+  <meta property="og:description" content="Play free fun browser games instantly. No login required!">
+  <meta property="og:type" content="website">
+  
+  <title>SimplePlay – Free Browser Games for Everyone</title>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SimplePlay",
+    "url": "https://yourdomain.netlify.app",
+    "description": "Free browser games for everyone",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourdomain.netlify.app/games.html?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        🎮 Simple<span>Play</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Play Free Games Instantly ✨</h1>
+    <p>A collection of games made for fun, not profit. No downloads, no sign-ups, no nonsense!</p>
+    <div class="hero-buttons">
+      <a href="games.html" class="btn btn-primary">🎮 Start Playing</a>
+      <a href="#featured" class="btn btn-secondary">Browse Games</a>
+    </div>
+  </section>
+
+  <!-- Featured Games Section -->
+  <div class="container" id="featured">
+    <section class="section">
+      <h2 class="section-title">🌟 Featured Games</h2>
+      <div class="game-grid">
+        <div class="game-card" onclick="loadGame('tictactoe')">
+          <div class="game-icon">⭕</div>
+          <h3>Tic Tac Toe</h3>
+          <p>Classic 3x3 strategy game. Beat the AI or challenge a friend!</p>
+          <button class="btn btn-primary">Play Now</button>
+        </div>
+
+        <div class="game-card" onclick="loadGame('wordpuzzle')">
+          <div class="game-icon">📝</div>
+          <h3>Word Puzzle</h3>
+          <p>Unscramble letters to find the hidden word. Test your vocabulary!</p>
+          <button class="btn btn-primary">Play Now</button>
+        </div>
+
+        <div class="game-card" onclick="loadGame('memory')">
+          <div class="game-icon">🧠</div>
+          <h3>Memory Match</h3>
+          <p>Flip cards and find matching pairs. Train your memory!</p>
+          <button class="btn btn-primary">Play Now</button>
+        </div>
+
+        <div class="game-card" onclick="loadGame('trivia')">
+          <div class="game-icon">❓</div>
+          <h3>Trivia Quiz</h3>
+          <p>Test your knowledge with fun multiple-choice questions!</p>
+          <button class="btn btn-primary">Play Now</button>
+        </div>
+
+        <div class="game-card" onclick="loadGame('rps')">
+          <div class="game-icon">✊</div>
+          <h3>Rock Paper Scissors</h3>
+          <p>The timeless classic. Can you beat the computer?</p>
+          <button class="btn btn-primary">Play Now</button>
+        </div>
+
+        <div class="game-card" onclick="loadGame('coinflip')">
+          <div class="game-icon">🪙</div>
+          <h3>Coin Flip</h3>
+          <p>Heads or tails? Test your luck with this simple game!</p>
+          <button class="btn btn-primary">Play Now</button>
+        </div>
+      </div>
+      
+      <div class="text-center mt-2">
+        <a href="games.html" class="btn btn-secondary">See All Games</a>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section">
+      <h2 class="section-title">Built by gamers, for gamers 🎯</h2>
+      <div class="game-grid">
+        <div class="game-card">
+          <div class="game-icon">⚡</div>
+          <h3>Instant Play</h3>
+          <p>No downloads or installations. Just click and play. Easy!</p>
+        </div>
+
+        <div class="game-card">
+          <div class="game-icon">🆓</div>
+          <h3>100% Free</h3>
+          <p>No ads. No logins. No paywalls. Just fun.</p>
+        </div>
+
+        <div class="game-card">
+          <div class="game-icon">📱</div>
+          <h3>Mobile Friendly</h3>
+          <p>Works everywhere - your phone, tablet, or laptop!</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>SimplePlay</h4>
+        <p>Free browser games for everyone. Play instantly without downloads or sign-ups!</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="chat.html">Community Chat</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Popular Games</h4>
+        <ul>
+          <li><a href="game.html?id=tictactoe">Tic Tac Toe</a></li>
+          <li><a href="game.html?id=trivia">Trivia Quiz</a></li>
+          <li><a href="game.html?id=memory">Memory Match</a></li>
+          <li><a href="game.html?id=wordpuzzle">Word Puzzle</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:contact@simpleplay.com">✉️ Contact</a></li>
+          <li><a href="#">🐦 Twitter</a></li>
+          <li><a href="#">📘 Facebook</a></li>
+          <li><a href="#">📷 Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimplePlay. Made by a human 💻 for humans who like fun</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

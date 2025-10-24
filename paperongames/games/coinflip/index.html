@@ -1,0 +1,31 @@
+<div class="coin-game">
+  <div class="coin-info">
+    <div class="coin-stats">
+      <div><strong>Correct:</strong> <span id="coinCorrect">0</span></div>
+      <div><strong>Wrong:</strong> <span id="coinWrong">0</span></div>
+      <div><strong>Streak:</strong> <span id="coinStreak">0</span></div>
+    </div>
+  </div>
+
+  <div class="coin-container">
+    <div class="coin" id="coin">
+      <div class="coin-side heads">H</div>
+      <div class="coin-side tails">T</div>
+    </div>
+  </div>
+
+  <div class="coin-result" id="coinResult">Make your prediction!</div>
+
+  <div class="coin-options">
+    <button class="btn btn-primary" onclick="flipCoin('heads')" id="headsBtn">
+      <span style="font-size: 2rem;">👑</span><br>Heads
+    </button>
+    <button class="btn btn-primary" onclick="flipCoin('tails')" id="tailsBtn">
+      <span style="font-size: 2rem;">🪙</span><br>Tails
+    </button>
+  </div>
+
+  <div class="coin-controls">
+    <button class="btn btn-secondary" onclick="resetCoinStats()">Reset Stats</button>
+  </div>
+</div>

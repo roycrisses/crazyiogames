@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game – SimplePlay</title>
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <style>
+    .game-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .game-header {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px var(--shadow);
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .game-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+    }
+
+    .game-controls {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .game-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px var(--shadow);
+      min-height: 500px;
+    }
+
+    #gameContent {
+      width: 100%;
+    }
+
+    .loading-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+      gap: 1rem;
+    }
+
+    .error-screen {
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .error-screen h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .game-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .game-controls {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .game-controls .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        🎮 Simple<span>Play</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="chat.html">Chat</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Game Section -->
+  <div class="container game-wrapper">
+    <div class="game-header">
+      <h1 class="game-title" id="gameTitle">
+        <span id="gameIcon">🎮</span>
+        <span id="gameName">Loading...</span>
+      </h1>
+      <div class="game-controls">
+        <button class="btn btn-secondary" onclick="window.location.href='games.html'">
+          ← Back to Games
+        </button>
+        <button class="btn btn-primary" onclick="restartGame()" id="restartBtn" style="display: none;">
+          🔄 Restart
+        </button>
+      </div>
+    </div>
+
+    <div class="game-container">
+      <div id="gameContent">
+        <div class="loading-screen">
+          <div class="loading"></div>
+          <p>Loading game...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>SimplePlay</h4>
+        <p>Free browser games for everyone. Play instantly without downloads or sign-ups!</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">All Games</a></li>
+          <li><a href="chat.html">Community Chat</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Popular Games</h4>
+        <ul>
+          <li><a href="game.html?id=tictactoe">Tic Tac Toe</a></li>
+          <li><a href="game.html?id=trivia">Trivia Quiz</a></li>
+          <li><a href="game.html?id=memory">Memory Match</a></li>
+          <li><a href="game.html?id=wordpuzzle">Word Puzzle</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:contact@simpleplay.com">✉️ Contact</a></li>
+          <li><a href="#">🐦 Twitter</a></li>
+          <li><a href="#">📘 Facebook</a></li>
+          <li><a href="#">📷 Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 SimplePlay. All rights reserved. Made with ❤️ for gamers.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Game metadata
+    const gameData = {
+      tictactoe: { name: 'Tic Tac Toe', icon: '⭕' },
+      connectrope: { name: 'Connect Rope', icon: '🔗' },
+      wordpuzzle: { name: 'Word Puzzle', icon: '📝' },
+      guessmeaning: { name: 'Guess the Meaning', icon: '📚' },
+      trivia: { name: 'Trivia Quiz', icon: '❓' },
+      memory: { name: 'Memory Match', icon: '🧠' },
+      coinflip: { name: 'Coin Flip', icon: '🪙' },
+      rps: { name: 'Rock Paper Scissors', icon: '✊' }
+    };
+
+    let currentGameId = '';
+
+    // Get game ID from URL
+    function getGameId() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('id');
+    }
+
+    // Load game
+    async function loadGameContent() {
+      currentGameId = getGameId();
+      
+      if (!currentGameId || !gameData[currentGameId]) {
+        showError('Game not found');
+        return;
+      }
+
+      const game = gameData[currentGameId];
+      
+      // Update page title and header
+      document.title = `${game.name} – SimplePlay`;
+      document.getElementById('gameName').textContent = game.name;
+      document.getElementById('gameIcon').textContent = game.icon;
+      
+      try {
+        // Load game HTML
+        const response = await fetch(`games/${currentGameId}/index.html`);
+        
+        if (!response.ok) {
+          throw new Error('Game not found');
+        }
+        
+        const html = await response.text();
+        document.getElementById('gameContent').innerHTML = html;
+        
+        // Load game CSS
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = `games/${currentGameId}/style.css`;
+        document.head.appendChild(cssLink);
+        
+        // Load game JS
+        const script = document.createElement('script');
+        script.src = `games/${currentGameId}/game.js`;
+        document.body.appendChild(script);
+        
+        // Show restart button
+        document.getElementById('restartBtn').style.display = 'inline-block';
+        
+      } catch (error) {
+        console.error('Error loading game:', error);
+        showError('Failed to load game');
+      }
+    }
+
+    // Show error
+    function showError(message) {
+      document.getElementById('gameContent').innerHTML = `
+        <div class="error-screen">
+          <h2>😔 ${message}</h2>
+          <p>The game you're looking for doesn't exist or couldn't be loaded.</p>
+          <a href="games.html" class="btn btn-primary">Browse All Games</a>
+        </div>
+      `;
+    }
+
+    // Restart game
+    function restartGame() {
+      location.reload();
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', loadGameContent);
+  </script>
+</body>
+</html>
